@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for film in films %}
+        <li>影片条目:{{ film.Doubanid }}</li>
+        <ul>
+            <li>中文名:{{ film.Name }}</li>
+            <li>影片类型:{{ film.Genre }}</li>
+            <li>简介:{{ film.Description }}</li>
+            <li>语言:{{ film.Language }}</li>
+            <li>制片国家:{{ film.Country }}</li>
+            <li>别名:{{ film.Alias }}</li>
+            <li>官方名字:{{ film.OriginalName }}</li>
+            <li>豆瓣评分:{{ film.DoubanRating }}</li>
+            <li>上映时间:{{ film.DateReleased }}</li>
+        </ul>
+    {% endfor %}
+</ul>
+</body>
+</html>

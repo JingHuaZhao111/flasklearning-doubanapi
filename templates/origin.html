@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    {{ form.csrf_token() }}
+    {{ form.film_id.label }}{{ form.film_id }}
+    {{ form.check }}<br>
+{#    显示消息闪现的内容#}
+    {% for message in get_flashed_messages() %}
+        <li>{{ message }}</li><br>
+    {% endfor %}
+</form>
+<hr>
+<ul><a href="{{ url_for('paqu') }}">爬取</a><br>
+<a href="{{ url_for('clear') }}">清空</a><br>
+<a href="{{ url_for('show') }}" target="_blank">展示数据库中所有数据</a><br>
+</ul>
+
+</body>
+</html>
